@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S. Sankarsha | Grand Line Interactive AI Portfolio</title>
+    <meta name="description" content="One Piece Interactive Portfolio of S. Sankarsha (Captain of the AI Pirates) - B.Tech AI & ML student at VIT Bhopal.">
+    <meta name="author" content="S. Sankarsha">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="S. Sankarsha | Captain of the AI Pirates">
+    <meta property="og:description" content="Sail through the Grand Line across 10 islands, meet Straw Hat guides, and chat with Sunny AI Assistant.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Full-Screen Gear 5 Luffy Entry Splash Overlay -->
+    <div class="gear5-splash" id="gear5SplashOverlay">
+        <div class="gear5-splash-content">
+            <span class="drum-tag">DRUMS OF LIBERATION // GEAR 5 JOYBOY</span>
+            <h1 class="drum-title">Welcome Aboard S. Sankarsha's Ship!</h1>
+            <p class="drum-subtext">Set sail across 10 Grand Line islands, explore LLM Security micro-services, and chat with Sunny AI!</p>
+            <button class="btn-start-voyage" id="startVoyageBtn">
+                SET SAIL ON THE GRAND LINE 👒
+            </button>
+        </div>
+    </div>
+
+    <!-- FULL-PAGE ANIMATED GEAR 5 SKY & OCEAN LAYERS -->
+    <div class="cloud-drift-container"></div>
+    <div class="cloud-left"></div>
+    <div class="cloud-right"></div>
+
+    <!-- Ocean Animation Background Canvas -->
+    <canvas id="oceanCanvas"></canvas>
+
+    <!-- Floating Glass Pill Log Pose Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand" data-luffy-talk="Shishishi! Welcome to S. Sankarsha's Grand Line Ship! Set sail with us!">
+                <span class="straw-hat">👒</span>
+                <span class="brand-name">S.Sankarsha <span class="brand-tag">// GRAND_LINE</span></span>
+            </a>
+
+            <div class="nav-divider"></div>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                <i data-feather="menu"></i>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link active">🏝️ Home</a>
+                <a href="skills.html" class="nav-link">🗡️ Skills</a>
+                <a href="projects.html" class="nav-link">⚙️ Projects</a>
+                <a href="academics.html" class="nav-link">📜 Academics</a>
+                <a href="experience.html" class="nav-link">🌊 Experience</a>
+                <a href="collab.html" class="nav-link">🤝 Collab & Feedback</a>
+                
+                <button class="btn btn-outline btn-sm" id="openWatchlistBtn" title="View Saved Projects">
+                    <i data-feather="bookmark"></i> Watchlist (<span id="watchlistCount">0</span>)
+                </button>
+
+                <button class="btn btn-outline btn-sm sfx-toggle" id="sfxToggleBtn" title="Toggle SFX">
+                    <i data-feather="volume-2"></i> SFX: ON
+                </button>
+
+                <button class="btn btn-outline btn-sm" id="openTreasureBtn">
+                    <i data-feather="package"></i> Chest
+                </button>
+
+                <button class="btn btn-primary btn-sm btn-sunny-ai" id="openSunnyAiBtn">
+                    <i data-feather="cpu"></i> Sunny AI
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- ISLAND 1: DAWN ISLAND (Hero Billboard) -->
+        <section class="section island-section hero-section" id="dawn-island" data-luffy-talk="I'm Monkey D. Luffy! S. Sankarsha is our AI Captain, and he's gonna build the safest AI in the world!">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="streaming-badge-row">
+                        <span class="streaming-badge netflix-red">SEASON 1 // GRAND LINE</span>
+                        <span class="streaming-badge match-green">99% MATCH FOR RECRUITERS</span>
+                        <span class="streaming-badge crunchy-orange">4K ULTRA HD</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        "I'm S. Sankarsha, and I'm gonna conquer the <span class="text-highlight">AI Frontier</span> in the Grand Line!"
+                    </h1>
+
+                    <p class="hero-description">
+                        Hi! I'm <strong>S. Sankarsha (Captain of the AI Pirates)</strong>—a B.Tech AI & ML student at VIT Bhopal University. Driven by Luffy's spirit of relentless determination, I build FastAPI security gateways, LLM prompt shields, OpenCV face systems, and 24/7 autonomous agents.
+                    </p>
+
+                    <div class="character-guide-box luffy-guide">
+                        <img src="assets/characters/luffy.jpg" alt="Monkey D. Luffy" class="guide-avatar">
+                        <div>
+                            <span class="guide-name">👒 Monkey D. Luffy (Captain Guide)</span>
+                            <p class="guide-speech">"S. Sankarsha never backs down! He works hard every day studying Machine Learning, Python, and LLM security at VIT Bhopal so he can build awesome technology for everyone!"</p>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#projects-fleet-section" class="btn btn-primary">
+                            <i data-feather="play"></i> ▶ View All 16 Projects
+                        </a>
+                        <a href="#certifications-section" class="btn btn-outline">
+                            <i data-feather="award"></i> Certifications
+                        </a>
+                        <a href="#contact-collab-section" class="btn btn-outline">
+                            <i data-feather="message-square"></i> Contact & Collab
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="anime-frame jolly-frame">
+                        <img src="assets/characters/luffy.jpg" alt="S. Sankarsha Captain Avatar" class="anime-avatar" loading="eager">
+                        <div class="frame-tag">CAPTAIN // S. SANKARSHA</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ALL 16 OPEN SOURCE PROJECTS GRID -->
+        <section class="section island-section" id="projects-fleet-section">
+            <div class="section-header text-center">
+                <span class="section-tag">⚙️ WATER 7 SHIPYARD FLEET</span>
+                <h2 class="section-title">All 16 Open Source Repositories & Unique SFX</h2>
+            </div>
+
+            <div class="character-guide-box franky-guide margin-auto" style="max-width: 800px; margin-bottom: 2.5rem;">
+                <div class="guide-avatar-text">🤖</div>
+                <div>
+                    <span class="guide-name">🤖 Franky (The Shipwright)</span>
+                    <p class="guide-speech">"SUPAAAH! Hover over any project card to play its unique synthesized sound effect! Click for live repo testing & direct ZIP downloads!"</p>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- 1. LLM Firewall -->
+                <article class="wanted-poster card" data-sfx-id="1" id="zoroProjectCard">
+                    <div class="sword-slash-overlay" id="zoroSlashOverlay"><span class="slash-line line-1"></span><span class="slash-line line-2"></span><span class="slash-line line-3"></span></div>
+                    <div class="poster-header"><span class="poster-dead-alive">WANTED // ZORO'S CYBER SHIELD</span></div>
+                    <div class="project-image-wrapper">
+                        <img src="assets/projects/project_1.svg" alt="LLM Firewall" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">🛡️ FASTAPI SECURITY</div>
+                    </div>
+                    <div class="project-body">
+                        <div class="character-quote-box">
+                            <span class="quote-speaker">🗡️ Roronoa Zoro:</span>
+                            <p class="quote-text">"I sliced through prompt injection attempts. Threat scoring algorithms cut down malicious context hijacking!"</p>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag"><i data-feather="server"></i> FastAPI</span>
+                            <span class="tag"><i data-feather="database"></i> MongoDB</span>
+                            <span class="tag"><i data-feather="shield"></i> Security</span>
+                        </div>
+                        <h3 class="project-title">LLM Firewall & Prompt Shield</h3>
+                        <p class="project-description">High-speed API security gateway inspecting prompt injection threats and auditing context logs in real-time.</p>
+                        <div class="bounty-amount" data-tooltip="FastAPI Gateway + Real-time Threat Scoring + MongoDB Audit Trail">
+                            <span class="berry-symbol">฿</span> 500,000,000- <span class="bounty-badge">High Impact</span>
+                        </div>
+                        <div class="project-footer" style="display: flex; gap: 0.375rem; flex-wrap: wrap;">
+                            <button class="btn btn-sm btn-primary open-episode-btn" data-project="1"><i data-feather="play"></i> Specs</button>
+                            <button class="btn btn-sm btn-outline bookmark-btn" data-id="1" data-title="LLM Firewall & Prompt Shield">🔖 Save</button>
+                            <a href="https://github.com/Sankarsh369/llm-firewall-api" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i data-feather="external-link"></i> Live Repo</a>
+                            <a href="https://github.com/Sankarsh369/llm-firewall-api/archive/refs/heads/main.zip" class="btn btn-sm btn-outline" download><i data-feather="download"></i> ZIP</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. AI News Agent -->
+                <article class="wanted-poster card" data-sfx-id="2" id="namiProjectCard">
+                    <div class="lightning-overlay" id="namiLightningOverlay"><div class="lightning-bolt"></div></div>
+                    <div class="poster-header"><span class="poster-dead-alive">WANTED // NAMI'S AI NAVIGATOR</span></div>
+                    <div class="project-image-wrapper">
+                        <img src="assets/projects/project_2.svg" alt="AI News Agent" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">🤖 GEMINI AGENT</div>
+                    </div>
+                    <div class="project-body">
+                        <div class="character-quote-box">
+                            <span class="quote-speaker">🍊 Nami:</span>
+                            <p class="quote-text">"24/7 GitHub Actions weather navigation! NewsAPI feeds summarized with Google Gemini AI and dispatched directly to Telegram!"</p>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag"><i data-feather="cpu"></i> Gemini AI</span>
+                            <span class="tag"><i data-feather="rss"></i> NewsAPI</span>
+                            <span class="tag"><i data-feather="refresh-cw"></i> Cron</span>
+                        </div>
+                        <h3 class="project-title">Autonomous AI News Agent</h3>
+                        <p class="project-description">24/7 automated cloud pipeline fetching tech news, summarizing with Gemini AI, and broadcasting to Telegram.</p>
+                        <div class="bounty-amount" data-tooltip="Autonomous Cloud Cron + Gemini Summarization + Telegram Hooks">
+                            <span class="berry-symbol">฿</span> 350,000,000- <span class="bounty-badge">24/7 Cloud</span>
+                        </div>
+                        <div class="project-footer" style="display: flex; gap: 0.375rem; flex-wrap: wrap;">
+                            <button class="btn btn-sm btn-primary open-episode-btn" data-project="2"><i data-feather="play"></i> Specs</button>
+                            <button class="btn btn-sm btn-outline bookmark-btn" data-id="2" data-title="Autonomous AI News Agent">🔖 Save</button>
+                            <a href="https://github.com/Sankarsh369/ai-news-agent" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i data-feather="external-link"></i> Live Repo</a>
+                            <a href="https://github.com/Sankarsh369/ai-news-agent/archive/refs/heads/main.zip" class="btn btn-sm btn-outline" download><i data-feather="download"></i> ZIP</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. Health Care Center -->
+                <article class="wanted-poster card" data-sfx-id="3" id="chopperProjectCard">
+                    <div class="sakura-overlay" id="chopperSakuraOverlay"><div class="sakura-petal" style="left: 20%;"></div><div class="sakura-petal" style="left: 50%;"></div><div class="sakura-petal" style="left: 80%;"></div></div>
+                    <div class="poster-header"><span class="poster-dead-alive">WANTED // CHOPPER'S HEALTHCARE ML</span></div>
+                    <div class="project-image-wrapper">
+                        <img src="assets/projects/project_3.svg" alt="Medicine Rec System" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">🌸 HEALTHCARE ML</div>
+                    </div>
+                    <div class="project-body">
+                        <div class="character-quote-box">
+                            <span class="quote-speaker">🌸 Tony Tony Chopper:</span>
+                            <p class="quote-text">"I can cure any symptom using machine learning classification! Prescribing remedies, precautions, and dietary plans!"</p>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag"><i data-feather="code"></i> Python</span>
+                            <span class="tag"><i data-feather="box"></i> Scikit-learn</span>
+                            <span class="tag"><i data-feather="activity"></i> Disease ML</span>
+                        </div>
+                        <h3 class="project-title">Healthcare Disease Predictor</h3>
+                        <p class="project-description">Symptom-based recommendation engine predicting precautions, diets, and remedies using Decision Tree ML.</p>
+                        <div class="bounty-amount" data-tooltip="Scikit-learn Supervised Classification + Healthcare Tip Generator">
+                            <span class="berry-symbol">฿</span> 250,000,000- <span class="bounty-badge">ML Core</span>
+                        </div>
+                        <div class="project-footer" style="display: flex; gap: 0.375rem; flex-wrap: wrap;">
+                            <button class="btn btn-sm btn-primary open-episode-btn" data-project="3"><i data-feather="play"></i> Specs</button>
+                            <button class="btn btn-sm btn-outline bookmark-btn" data-id="3" data-title="Healthcare Disease Predictor">🔖 Save</button>
+                            <a href="https://github.com/Sankarsh369/Health_Care_center" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i data-feather="external-link"></i> Live Repo</a>
+                            <a href="https://github.com/Sankarsh369/Health_Care_center/archive/refs/heads/main.zip" class="btn btn-sm btn-outline" download><i data-feather="download"></i> ZIP</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4. Face Recognition Attendance -->
+                <article class="wanted-poster card" data-sfx-id="4">
+                    <div class="poster-header"><span class="poster-dead-alive">WANTED // OPENCV ATTENDANCE SYSTEM</span></div>
+                    <div class="project-image-wrapper">
+                        <img src="assets/projects/project_4.svg" alt="Face Recognition Attendance" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">👁️ VISION ML</div>
+                    </div>
+                    <div class="project-body">
+                        <div class="character-quote-box">
+                            <span class="quote-speaker">👁️ Shanks:</span>
+                            <p class="quote-text">"Observation Haki level computer vision! Automated facial identification for school attendance management."</p>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag"><i data-feather="camera"></i> OpenCV</span>
+                            <span class="tag"><i data-feather="user"></i> Face Recognition</span>
+                            <span class="tag"><i data-feather="globe"></i> Web Portal</span>
+                        </div>
+                        <h3 class="project-title">Face Recognition Attendance System</h3>
+                        <p class="project-description">Web-based automated attendance system for schools using OpenCV facial recognition and principal admin controls.</p>
+                        <div class="bounty-amount" data-tooltip="OpenCV Facial Embeddings + Role-Based Attendance Dashboard">
+                            <span class="berry-symbol">฿</span> 300,000,000- <span class="bounty-badge">Computer Vision</span>
+                        </div>
+                        <div class="project-footer" style="display: flex; gap: 0.375rem; flex-wrap: wrap;">
+                            <button class="btn btn-sm btn-primary open-episode-btn" data-project="4"><i data-feather="play"></i> Specs</button>
+                            <button class="btn btn-sm btn-outline bookmark-btn" data-id="4" data-title="Face Recognition Attendance System">🔖 Save</button>
+                            <a href="https://github.com/Sankarsh369/Face-recognition-attendance-system" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i data-feather="external-link"></i> Live Repo</a>
+                            <a href="https://github.com/Sankarsh369/Face-recognition-attendance-system/archive/refs/heads/main.zip" class="btn btn-sm btn-outline" download><i data-feather="download"></i> ZIP</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5. Digital Document Scanner -->
+                <article class="wanted-poster card" data-sfx-id="5">
+                    <div class="poster-header"><span class="poster-dead-alive">WANTED // DIGITAL DOCUMENT SCANNER</span></div>
+                    <div class="project-image-wrapper">
+                        <img src="assets/projects/project_5.svg" alt="Document Scanner" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">📄 OCR VISION</div>
+                    </div>
+                    <div class="project-body">
+                        <div class="character-quote-box">
+                            <span class="quote-speaker">👒 Luffy:</span>
+                            <p class="quote-text">"Stretch blurry camera photos into sharp digital documents with perspective warp algorithms!"</p>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag"><i data-feather="camera"></i> OpenCV</span>
+                            <span class="tag"><i data-feather="file-text"></i> Perspective Warp</span>
+                            <span class="tag"><i data-feather="code"></i> Python</span>
+                        </div>
+                        <h3 class="project-title">Digital Document Scanner</h3>
+                        <p class="project-description">Computer vision tool transforming mobile camera photos into clean, high-contrast digital document scans.</p>
+                        <div class="bounty-amount" data-tooltip="Contour Detection + 4-Point Perspective Transform + Adaptive Thresholding">
+                            <span class="berry-symbol">฿</span> 220,000,000- <span class="bounty-badge">CV Utility</span>
+                        </div>
+                        <div class="project-footer" style="display: flex; gap: 0.375rem; flex-wrap: wrap;">
+                            <button class="btn btn-sm btn-primary open-episode-btn" data-project="5"><i data-feather="play"></i> Specs</button>
+                            <button class="btn btn-sm btn-outline bookmark-btn" data-id="5" data-title="Digital Document Scanner">🔖 Save</button>
+                            <a href="https://github.com/Sankarsh369/digital-document-scanner" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i data-feather="external-link"></i> Live Repo</a>
+                            <a href="https://github.com/Sankarsh369/digital-document-scanner/archive/refs/heads/main.zip" class="btn btn-sm btn-outline" download><i data-feather="download"></i> ZIP</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 6. Desktop To-Do List App -->
+                <article class="wanted-poster card" data-sfx-id="6">
+                    <div class="poster-header"><span class="poster-dead-alive">WANTED // TKINTER TASK COMMANDER</span></div>
+                    <div class="project-image-wrapper">
+                        <img src="assets/projects/project_6.svg" alt="To-Do List App" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">📝 PYTHON GUI</div>
+                    </div>
+                    <div class="project-body">
+                        <div class="character-quote-box">
+                            <span class="quote-speaker">🗡️ Zoro:</span>
+                            <p class="quote-text">"Never miss a task deadline! Unique IDs, timestamp tracking, and overdue highlighting keep your voyage organized."</p>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag"><i data-feather="layout"></i> Tkinter</span>
+                            <span class="tag"><i data-feather="clock"></i> Overdue Alerts</span>
+                            <span class="tag"><i data-feather="database"></i> Persistence</span>
+                        </div>
+                        <h3 class="project-title">Python Desktop Task Commander</h3>
+                        <p class="project-description">Modern Tkinter GUI task manager with unique IDs, categories, due dates, overdue highlights, and persistent JSON storage.</p>
+                        <div class="bounty-amount" data-tooltip="Tkinter UI + Filter/Sort Engine + Timestamp Persistence">
+                            <span class="berry-symbol">฿</span> 200,000,000- <span class="bounty-badge">GUI App</span>
+                        </div>
+                        <div class="project-footer" style="display: flex; gap: 0.375rem; flex-wrap: wrap;">
+                            <button class="btn btn-sm btn-primary open-episode-btn" data-project="6"><i data-feather="play"></i> Specs</button>
+                            <button class="btn btn-sm btn-outline bookmark-btn" data-id="6" data-title="Python Task Commander">🔖 Save</button>
+                            <a href="https://github.com/Sankarsh369/To-Do-List-App" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i data-feather="external-link"></i> Live Repo</a>
+                            <a href="https://github.com/Sankarsh369/To-Do-List-App/archive/refs/heads/main.zip" class="btn btn-sm btn-outline" download><i data-feather="download"></i> ZIP</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 7. Skill Spot -->
+                <article class="wanted-poster card" data-sfx-id="7">
+                    <div class="poster-header"><span class="poster-dead-alive">WANTED // SKILL SPOT CAREER PORTAL</span></div>
+                    <div class="project-image-wrapper">
+                        <img src="assets/projects/project_7.svg" alt="Skill Spot" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">💼 CAREER UI</div>
+                    </div>
+                    <div class="project-body">
+                        <div class="character-quote-box">
+                            <span class="quote-speaker">🍊 Nami:</span>
+                            <p class="quote-text">"Find jobs matching your exact skill level, take quizzes, and level up your career bounty!"</p>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag"><i data-feather="globe"></i> HTML5/CSS3</span>
+                            <span class="tag"><i data-feather="briefcase"></i> Job Match</span>
+                            <span class="tag"><i data-feather="check-square"></i> Quizzes</span>
+                        </div>
+                        <h3 class="project-title">Skill Spot Job Matching Platform</h3>
+                        <p class="project-description">Interactive frontend web platform connecting job seekers to roles based on skill assessments and quizzes.</p>
+                        <div class="bounty-amount" data-tooltip="Interactive Skill Assessment Engine + Responsive Frontend Design">
+                            <span class="berry-symbol">฿</span> 180,000,000- <span class="bounty-badge">Frontend</span>
+                        </div>
+                        <div class="project-footer" style="display: flex; gap: 0.375rem; flex-wrap: wrap;">
+                            <button class="btn btn-sm btn-primary open-episode-btn" data-project="7"><i data-feather="play"></i> Specs</button>
+                            <button class="btn btn-sm btn-outline bookmark-btn" data-id="7" data-title="Skill Spot Platform">🔖 Save</button>
+                            <a href="https://github.com/Sankarsh369/Skill_Spot" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i data-feather="external-link"></i> Live Repo</a>
+                            <a href="https://github.com/Sankarsh369/Skill_Spot/archive/refs/heads/main.zip" class="btn btn-sm btn-outline" download><i data-feather="download"></i> ZIP</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 8. OpenLake -->
+                <article class="wanted-poster card" data-sfx-id="8">
+                    <div class="poster-header"><span class="poster-dead-alive">WANTED // OPENLAKE LLM STORAGE ENGINE</span></div>
+                    <div class="project-image-wrapper">
+                        <img src="assets/projects/project_8.svg" alt="OpenLake" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">⚡ LLM INFRA</div>
+                    </div>
+                    <div class="project-body">
+                        <div class="character-quote-box">
+                            <span class="quote-speaker">⚡ Shanks:</span>
+                            <p class="quote-text">"High-performance storage engine optimized for ultra-fast LLM inference and distributed GPU training!"</p>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag"><i data-feather="cpu"></i> GPU Training</span>
+                            <span class="tag"><i data-feather="database"></i> Storage Engine</span>
+                            <span class="tag"><i data-feather="zap"></i> LLM Inference</span>
+                        </div>
+                        <h3 class="project-title">OpenLake High-Performance Storage Engine</h3>
+                        <p class="project-description">Contributions to OpenLake — an open source storage engine for efficient LLM inference and GPU memory management.</p>
+                        <div class="bounty-amount" data-tooltip="High Performance Storage Engine + GPU Training Optimization">
+                            <span class="berry-symbol">฿</span> 400,000,000- <span class="bounty-badge">LLM Infra</span>
+                        </div>
+                        <div class="project-footer" style="display: flex; gap: 0.375rem; flex-wrap: wrap;">
+                            <button class="btn btn-sm btn-primary open-episode-btn" data-project="8"><i data-feather="play"></i> Specs</button>
+                            <button class="btn btn-sm btn-outline bookmark-btn" data-id="8" data-title="OpenLake LLM Storage Engine">🔖 Save</button>
+                            <a href="https://github.com/Sankarsh369/openlake" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i data-feather="external-link"></i> Live Repo</a>
+                            <a href="https://github.com/Sankarsh369/openlake/archive/refs/heads/main.zip" class="btn btn-sm btn-outline" download><i data-feather="download"></i> ZIP</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 9. AI Assistant Site -->
+                <article class="wanted-poster card" data-sfx-id="9">
+                    <div class="poster-header"><span class="poster-dead-alive">WANTED // NEXT.JS AI ASSISTANT WEB</span></div>
+                    <div class="project-image-wrapper">
+                        <img src="assets/projects/project_9.svg" alt="AI Assistant Site" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">🚀 NEXT.JS APP</div>
+                    </div>
+                    <div class="project-body">
+                        <div class="character-quote-box">
+                            <span class="quote-speaker">🍖 Chibi Luffy:</span>
+                            <p class="quote-text">"Next.js web assistant built with TypeScript for lightning-fast conversations and real-time responses!"</p>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag"><i data-feather="layers"></i> Next.js</span>
+                            <span class="tag"><i data-feather="code"></i> TypeScript</span>
+                            <span class="tag"><i data-feather="cpu"></i> AI Interface</span>
+                        </div>
+                        <h3 class="project-title">Next.js Autonomous AI Assistant Site</h3>
+                        <p class="project-description">Modern Next.js and TypeScript web application serving as an interactive AI assistant platform.</p>
+                        <div class="bounty-amount" data-tooltip="Next.js App Router + TypeScript Typing + Streaming AI Responses">
+                            <span class="berry-symbol">฿</span> 320,000,000- <span class="bounty-badge">Fullstack</span>
+                        </div>
+                        <div class="project-footer" style="display: flex; gap: 0.375rem; flex-wrap: wrap;">
+                            <button class="btn btn-sm btn-primary open-episode-btn" data-project="9"><i data-feather="play"></i> Specs</button>
+                            <button class="btn btn-sm btn-outline bookmark-btn" data-id="9" data-title="Next.js AI Assistant Site">🔖 Save</button>
+                            <a href="https://github.com/Sankarsh369/my-ai-assistant-site" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i data-feather="external-link"></i> Live Repo</a>
+                            <a href="https://github.com/Sankarsh369/my-ai-assistant-site/archive/refs/heads/main.zip" class="btn btn-sm btn-outline" download><i data-feather="download"></i> ZIP</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 10. DiffDocs Sandbox -->
+                <article class="wanted-poster card" data-sfx-id="10">
+                    <div class="poster-header"><span class="poster-dead-alive">WANTED // DIFFDOCS COMPARISON ENGINE</span></div>
+                    <div class="project-image-wrapper">
+                        <img src="assets/projects/project_10.svg" alt="DiffDocs Sandbox" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">🔍 DOC DIFF</div>
+                    </div>
+                    <div class="project-body">
+                        <div class="character-quote-box">
+                            <span class="quote-speaker">🗡️ Zoro:</span>
+                            <p class="quote-text">"Precision diffing! Spot structural changes between document versions instantly."</p>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag"><i data-feather="file-text"></i> Doc Diff</span>
+                            <span class="tag"><i data-feather="code"></i> Python</span>
+                            <span class="tag"><i data-feather="sliders"></i> Sandbox</span>
+                        </div>
+                        <h3 class="project-title">DiffDocs Sandbox Engine</h3>
+                        <p class="project-description">Visual document diffing sandbox comparing text modifications, deletions, and additions across files.</p>
+                        <div class="bounty-amount" data-tooltip="Algorithm Diff Engine + Side-by-Side Visual Comparison">
+                            <span class="berry-symbol">฿</span> 210,000,000- <span class="bounty-badge">Utility</span>
+                        </div>
+                        <div class="project-footer" style="display: flex; gap: 0.375rem; flex-wrap: wrap;">
+                            <button class="btn btn-sm btn-primary open-episode-btn" data-project="10"><i data-feather="play"></i> Specs</button>
+                            <button class="btn btn-sm btn-outline bookmark-btn" data-id="10" data-title="DiffDocs Sandbox Engine">🔖 Save</button>
+                            <a href="https://github.com/Sankarsh369/diffdocs-test-sandbox" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i data-feather="external-link"></i> Live Repo</a>
+                            <a href="https://github.com/Sankarsh369/diffdocs-test-sandbox/archive/refs/heads/main.zip" class="btn btn-sm btn-outline" download><i data-feather="download"></i> ZIP</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 11. DiffDocs Waitlist -->
+                <article class="wanted-poster card" data-sfx-id="11">
+                    <div class="poster-header"><span class="poster-dead-alive">WANTED // DIFFDOCS SAAS WAITLIST</span></div>
+                    <div class="project-image-wrapper">
+                        <img src="assets/projects/project_11.svg" alt="DiffDocs Waitlist" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">📈 SAAS LANDING</div>
+                    </div>
+                    <div class="project-body">
+                        <div class="character-quote-box">
+                            <span class="quote-speaker">🍊 Nami:</span>
+                            <p class="quote-text">"Conversion-optimized waitlist landing page capturing early user signups for SaaS document tools."</p>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag"><i data-feather="globe"></i> CSS3/HTML</span>
+                            <span class="tag"><i data-feather="mail"></i> Lead Capture</span>
+                            <span class="tag"><i data-feather="star"></i> SaaS Landing</span>
+                        </div>
+                        <h3 class="project-title">DiffDocs Product Waitlist</h3>
+                        <p class="project-description">Sleek product landing page built to capture waitlist subscribers for the DiffDocs document engine.</p>
+                        <div class="bounty-amount" data-tooltip="High Converting UI + Micro Animations + Lead Intake">
+                            <span class="berry-symbol">฿</span> 160,000,000- <span class="bounty-badge">Landing UI</span>
+                        </div>
+                        <div class="project-footer" style="display: flex; gap: 0.375rem; flex-wrap: wrap;">
+                            <button class="btn btn-sm btn-primary open-episode-btn" data-project="11"><i data-feather="play"></i> Specs</button>
+                            <button class="btn btn-sm btn-outline bookmark-btn" data-id="11" data-title="DiffDocs Product Waitlist">🔖 Save</button>
+                            <a href="https://github.com/Sankarsh369/diffdocs-waitlist" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i data-feather="external-link"></i> Live Repo</a>
+                            <a href="https://github.com/Sankarsh369/diffdocs-waitlist/archive/refs/heads/main.zip" class="btn btn-sm btn-outline" download><i data-feather="download"></i> ZIP</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 12. Wine Quality Analytics -->
+                <article class="wanted-poster card" data-sfx-id="12">
+                    <div class="poster-header"><span class="poster-dead-alive">WANTED // WINE QUALITY ANALYTICS</span></div>
+                    <div class="project-image-wrapper">
+                        <img src="assets/projects/project_12.svg" alt="Wine Analytics" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">🍷 ML ANALYTICS</div>
+                    </div>
+                    <div class="project-body">
+                        <div class="character-quote-box">
+                            <span class="quote-speaker">🌸 Chopper:</span>
+                            <p class="quote-text">"Analyzing chemical features like acidity and alcohol content to predict wine quality scores!"</p>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag"><i data-feather="bar-chart"></i> Jupyter</span>
+                            <span class="tag"><i data-feather="box"></i> Pandas</span>
+                            <span class="tag"><i data-feather="activity"></i> ML Regression</span>
+                        </div>
+                        <h3 class="project-title">Wine Quality Classification & Analytics</h3>
+                        <p class="project-description">Machine learning exploration evaluating chemical properties to classify wine quality levels with EDA plots.</p>
+                        <div class="bounty-amount" data-tooltip="Exploratory Data Analysis + Feature Correlation + ML Classifiers">
+                            <span class="berry-symbol">฿</span> 190,000,000- <span class="bounty-badge">Data Science</span>
+                        </div>
+                        <div class="project-footer" style="display: flex; gap: 0.375rem; flex-wrap: wrap;">
+                            <button class="btn btn-sm btn-primary open-episode-btn" data-project="12"><i data-feather="play"></i> Specs</button>
+                            <button class="btn btn-sm btn-outline bookmark-btn" data-id="12" data-title="Wine Quality Analytics">🔖 Save</button>
+                            <a href="https://github.com/Sankarsh369/Wine_Testing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i data-feather="external-link"></i> Live Repo</a>
+                            <a href="https://github.com/Sankarsh369/Wine_Testing/archive/refs/heads/main.zip" class="btn btn-sm btn-outline" download><i data-feather="download"></i> ZIP</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 13. Automated ETL Pipeline -->
+                <article class="wanted-poster card" data-sfx-id="13">
+                    <div class="poster-header"><span class="poster-dead-alive">WANTED // DATA ETL PIPELINE</span></div>
+                    <div class="project-image-wrapper">
+                        <img src="assets/projects/project_13.svg" alt="ETL Pipeline" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">🔄 DATA PIPELINE</div>
+                    </div>
+                    <div class="project-body">
+                        <div class="character-quote-box">
+                            <span class="quote-speaker">🗡️ Zoro:</span>
+                            <p class="quote-text">"Extracting raw data, transforming schema fields, and loading clean datasets into destination storage!"</p>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag"><i data-feather="database"></i> ETL</span>
+                            <span class="tag"><i data-feather="code"></i> Python</span>
+                            <span class="tag"><i data-feather="layers"></i> Data Pipeline</span>
+                        </div>
+                        <h3 class="project-title">Automated Data ETL Pipeline</h3>
+                        <p class="project-description">End-to-end Python pipeline extracting multi-source data, validating schemas, and writing structured tables.</p>
+                        <div class="bounty-amount" data-tooltip="Automated Extraction + Schema Validation + Destination Loading">
+                            <span class="berry-symbol">฿</span> 240,000,000- <span class="bounty-badge">Data Eng</span>
+                        </div>
+                        <div class="project-footer" style="display: flex; gap: 0.375rem; flex-wrap: wrap;">
+                            <button class="btn btn-sm btn-primary open-episode-btn" data-project="13"><i data-feather="play"></i> Specs</button>
+                            <button class="btn btn-sm btn-outline bookmark-btn" data-id="13" data-title="Automated Data ETL Pipeline">🔖 Save</button>
+                            <a href="https://github.com/Sankarsh369/ETL" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i data-feather="external-link"></i> Live Repo</a>
+                            <a href="https://github.com/Sankarsh369/ETL/archive/refs/heads/main.zip" class="btn btn-sm btn-outline" download><i data-feather="download"></i> ZIP</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 14. Messy Employee Dataset Cleaning -->
+                <article class="wanted-poster card" data-sfx-id="14">
+                    <div class="poster-header"><span class="poster-dead-alive">WANTED // PANDAS DATA CLEANING</span></div>
+                    <div class="project-image-wrapper">
+                        <img src="assets/projects/project_14.svg" alt="Messy Dataset" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">🧹 DATA CLEANING</div>
+                    </div>
+                    <div class="project-body">
+                        <div class="character-quote-box">
+                            <span class="quote-speaker">🍊 Nami:</span>
+                            <p class="quote-text">"Fixing missing values, outlier anomalies, and messy strings with Pandas data wrangling!"</p>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag"><i data-feather="box"></i> Pandas</span>
+                            <span class="tag"><i data-feather="filter"></i> Imputation</span>
+                            <span class="tag"><i data-feather="file"></i> Jupyter</span>
+                        </div>
+                        <h3 class="project-title">Messy Employee Data Wrangling</h3>
+                        <p class="project-description">Data cleaning notebook fixing duplicate records, null values, and formatting inconsistencies using Pandas.</p>
+                        <div class="bounty-amount" data-tooltip="Missing Value Imputation + Outlier Detection + String Normalization">
+                            <span class="berry-symbol">฿</span> 170,000,000- <span class="bounty-badge">Wrangling</span>
+                        </div>
+                        <div class="project-footer" style="display: flex; gap: 0.375rem; flex-wrap: wrap;">
+                            <button class="btn btn-sm btn-primary open-episode-btn" data-project="14"><i data-feather="play"></i> Specs</button>
+                            <button class="btn btn-sm btn-outline bookmark-btn" data-id="14" data-title="Messy Data Wrangling">🔖 Save</button>
+                            <a href="https://github.com/Sankarsh369/Messy-Employee-Dataset" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i data-feather="external-link"></i> Live Repo</a>
+                            <a href="https://github.com/Sankarsh369/Messy-Employee-Dataset/archive/refs/heads/main.zip" class="btn btn-sm btn-outline" download><i data-feather="download"></i> ZIP</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 15. One Piece Anime Portfolio -->
+                <article class="wanted-poster card" data-sfx-id="15">
+                    <div class="poster-header"><span class="poster-dead-alive">WANTED // ONE PIECE PORTFOLIO</span></div>
+                    <div class="project-image-wrapper">
+                        <img src="assets/projects/project_15.svg" alt="One Piece Portfolio" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">🏴‍☠️ GEAR 5 WEB</div>
+                    </div>
+                    <div class="project-body">
+                        <div class="character-quote-box">
+                            <span class="quote-speaker">👒 Luffy:</span>
+                            <p class="quote-text">"Set sail on the Grand Line! Gear 5 Joyboy theme, Web Audio SFX, and 10 interactive islands!"</p>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag"><i data-feather="sun"></i> Gear 5 Theme</span>
+                            <span class="tag"><i data-feather="volume-2"></i> Audio Synth</span>
+                            <span class="tag"><i data-feather="cpu"></i> Sunny AI</span>
+                        </div>
+                        <h3 class="project-title">One Piece Grand Line Portfolio</h3>
+                        <p class="project-description">Interactive multi-page anime portfolio with Gear 5 full-page sky gradient, moving clouds, and Web Audio synthesizers.</p>
+                        <div class="bounty-amount" data-tooltip="Full-Page Sky Gradient + Interactive Canvas Physics + Thousand Sunny AI">
+                            <span class="berry-symbol">฿</span> 600,000,000- <span class="bounty-badge">Legendary</span>
+                        </div>
+                        <div class="project-footer" style="display: flex; gap: 0.375rem; flex-wrap: wrap;">
+                            <button class="btn btn-sm btn-primary open-episode-btn" data-project="15"><i data-feather="play"></i> Specs</button>
+                            <button class="btn btn-sm btn-outline bookmark-btn" data-id="15" data-title="Grand Line Anime Portfolio">🔖 Save</button>
+                            <a href="https://github.com/Sankarsh369/My-Protfolio" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i data-feather="external-link"></i> Live Repo</a>
+                            <a href="https://github.com/Sankarsh369/My-Protfolio/archive/refs/heads/main.zip" class="btn btn-sm btn-outline" download><i data-feather="download"></i> ZIP</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 16. Technical Resume Log Book -->
+                <article class="wanted-poster card" data-sfx-id="16">
+                    <div class="poster-header"><span class="poster-dead-alive">WANTED // RESUME LOG BOOK</span></div>
+                    <div class="project-image-wrapper">
+                        <img src="assets/projects/project_16.svg" alt="Resume Log Book" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">📜 CV LOG BOOK</div>
+                    </div>
+                    <div class="project-body">
+                        <div class="character-quote-box">
+                            <span class="quote-speaker">⚡ Shanks:</span>
+                            <p class="quote-text">"Captain S. Sankarsha's official resume log book detailing academic milestones, projects, and AI skills."</p>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag"><i data-feather="file-text"></i> Curriculum Vitae</span>
+                            <span class="tag"><i data-feather="award"></i> Credentials</span>
+                            <span class="tag"><i data-feather="user"></i> Bio</span>
+                        </div>
+                        <h3 class="project-title">Technical Resume Log Book</h3>
+                        <p class="project-description">Dedicated repository storing S. Sankarsha's official resume, skill credentials, and academic milestones.</p>
+                        <div class="bounty-amount" data-tooltip="Official Resume Repository + Verified Academic & Skill Credentials">
+                            <span class="berry-symbol">฿</span> 250,000,000- <span class="bounty-badge">Official CV</span>
+                        </div>
+                        <div class="project-footer" style="display: flex; gap: 0.375rem; flex-wrap: wrap;">
+                            <button class="btn btn-sm btn-primary open-episode-btn" data-project="16"><i data-feather="play"></i> Specs</button>
+                            <button class="btn btn-sm btn-outline bookmark-btn" data-id="16" data-title="Technical Resume Log Book">🔖 Save</button>
+                            <a href="https://github.com/Sankarsh369/S-Sankarsha_Resume" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i data-feather="external-link"></i> Live Repo</a>
+                            <a href="https://github.com/Sankarsh369/S-Sankarsha_Resume/archive/refs/heads/main.zip" class="btn btn-sm btn-outline" download><i data-feather="download"></i> ZIP</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- LICENSES & CERTIFICATIONS SECTION WITH REAL IMAGES -->
+        <section class="section island-section" id="certifications-section">
+            <div class="section-header text-center">
+                <span class="section-tag">🌸 DRUM MEDICAL PEAKS</span>
+                <h2 class="section-title">Verified LinkedIn Licenses & Certificates</h2>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Cert 1 -->
+                <div class="card wanted-poster text-center">
+                    <div class="project-image-wrapper">
+                        <img src="assets/certificates/cert_1.svg" alt="LinkedIn Certificate 1" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">📜 VERIFIED CERTIFICATE</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">AI & ML Foundations</h3>
+                        <p class="project-description">VIT Bhopal University & Vityarthi verified credential covering supervised machine learning algorithms.</p>
+                        <a href="assets/certificates/cert_1.svg" target="_blank" class="btn btn-sm btn-outline"><i data-feather="maximize-2"></i> View Full Image</a>
+                    </div>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="card wanted-poster text-center">
+                    <div class="project-image-wrapper">
+                        <img src="assets/certificates/cert_2.svg" alt="LinkedIn Certificate 2" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">📜 VERIFIED CERTIFICATE</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Supervised Machine Learning</h3>
+                        <p class="project-description">DeepLearning.AI & Coursera decision tree classification and regression metrics.</p>
+                        <a href="assets/certificates/cert_2.svg" target="_blank" class="btn btn-sm btn-outline"><i data-feather="maximize-2"></i> View Full Image</a>
+                    </div>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="card wanted-poster text-center">
+                    <div class="project-image-wrapper">
+                        <img src="assets/certificates/cert_3.svg" alt="LinkedIn Certificate 3" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">📜 VERIFIED CERTIFICATE</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Data Preprocessing & Analytics</h3>
+                        <p class="project-description">Exploratory data analysis, null value imputation, and feature scaling certification.</p>
+                        <a href="assets/certificates/cert_3.svg" target="_blank" class="btn btn-sm btn-outline"><i data-feather="maximize-2"></i> View Full Image</a>
+                    </div>
+                </div>
+
+                <!-- Cert 4 -->
+                <div class="card wanted-poster text-center">
+                    <div class="project-image-wrapper">
+                        <img src="assets/certificates/cert_4.svg" alt="LinkedIn Certificate 4" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">📜 VERIFIED CERTIFICATE</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Computer Vision & OpenCV Systems</h3>
+                        <p class="project-description">OpenCV facial embeddings, automated image processing, and perspective transform.</p>
+                        <a href="assets/certificates/cert_4.svg" target="_blank" class="btn btn-sm btn-outline"><i data-feather="maximize-2"></i> View Full Image</a>
+                    </div>
+                </div>
+
+                <!-- Cert 5 -->
+                <div class="card wanted-poster text-center">
+                    <div class="project-image-wrapper">
+                        <img src="assets/certificates/cert_5.svg" alt="LinkedIn Certificate 5" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">📜 VERIFIED CERTIFICATE</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">FastAPI Security & Micro-services</h3>
+                        <p class="project-description">LLM security micro-services, threat scoring algorithms, and API gateway design.</p>
+                        <a href="assets/certificates/cert_5.svg" target="_blank" class="btn btn-sm btn-outline"><i data-feather="maximize-2"></i> View Full Image</a>
+                    </div>
+                </div>
+
+                <!-- Cert 6 -->
+                <div class="card wanted-poster text-center">
+                    <div class="project-image-wrapper">
+                        <img src="assets/certificates/cert_6.svg" alt="LinkedIn Certificate 6" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">📜 VERIFIED CERTIFICATE</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Automated ETL Pipeline Engineering</h3>
+                        <p class="project-description">Python ETL pipeline extraction, schema transformation, and destination database writing.</p>
+                        <a href="assets/certificates/cert_6.svg" target="_blank" class="btn btn-sm btn-outline"><i data-feather="maximize-2"></i> View Full Image</a>
+                    </div>
+                </div>
+
+                <!-- Cert 7 -->
+                <div class="card wanted-poster text-center">
+                    <div class="project-image-wrapper">
+                        <img src="assets/certificates/cert_7.svg" alt="LinkedIn Certificate 7" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">📜 VERIFIED CERTIFICATE</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Autonomous Cloud Automation</h3>
+                        <p class="project-description">GitHub Actions automated 24/7 cron jobs, NewsAPI integration, and Google Gemini AI summarization.</p>
+                        <a href="assets/certificates/cert_7.svg" target="_blank" class="btn btn-sm btn-outline"><i data-feather="maximize-2"></i> View Full Image</a>
+                    </div>
+                </div>
+
+                <!-- Cert 8 -->
+                <div class="card wanted-poster text-center">
+                    <div class="project-image-wrapper">
+                        <img src="assets/certificates/cert_8.svg" alt="LinkedIn Certificate 8" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">📜 VERIFIED CERTIFICATE</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Python Desktop GUI Engineering</h3>
+                        <p class="project-description">Tkinter desktop GUI development, JSON storage persistence, and task management systems.</p>
+                        <a href="assets/certificates/cert_8.svg" target="_blank" class="btn btn-sm btn-outline"><i data-feather="maximize-2"></i> View Full Image</a>
+                    </div>
+                </div>
+
+                <!-- Cert 9 -->
+                <div class="card wanted-poster text-center">
+                    <div class="project-image-wrapper">
+                        <img src="assets/certificates/cert_9.svg" alt="LinkedIn Certificate 9" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">📜 VERIFIED CERTIFICATE</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Modern Responsive Web Development</h3>
+                        <p class="project-description">Modern HTML5, CSS3, JavaScript ES6+, responsive design systems, and web accessibility.</p>
+                        <a href="assets/certificates/cert_9.svg" target="_blank" class="btn btn-sm btn-outline"><i data-feather="maximize-2"></i> View Full Image</a>
+                    </div>
+                </div>
+
+                <!-- Cert 10 -->
+                <div class="card wanted-poster text-center">
+                    <div class="project-image-wrapper">
+                        <img src="assets/certificates/cert_10.svg" alt="LinkedIn Certificate 10" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">📜 VERIFIED CERTIFICATE</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Machine Learning Model Optimization</h3>
+                        <p class="project-description">Supervised learning classification algorithms, hyperparameter tuning, and cross-validation techniques.</p>
+                        <a href="assets/certificates/cert_10.svg" target="_blank" class="btn btn-sm btn-outline"><i data-feather="maximize-2"></i> View Full Image</a>
+                    </div>
+                </div>
+
+                <!-- Cert 11 -->
+                <div class="card wanted-poster text-center">
+                    <div class="project-image-wrapper">
+                        <img src="assets/certificates/cert_11.svg" alt="LinkedIn Certificate 11" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">📜 VERIFIED CERTIFICATE</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Data Wrangling & Missing Value Handling</h3>
+                        <p class="project-description">Handling missing values, outlier detection, data normalization, and Pandas dataframe cleaning.</p>
+                        <a href="assets/certificates/cert_11.svg" target="_blank" class="btn btn-sm btn-outline"><i data-feather="maximize-2"></i> View Full Image</a>
+                    </div>
+                </div>
+
+                <!-- Cert 12 -->
+                <div class="card wanted-poster text-center">
+                    <div class="project-image-wrapper">
+                        <img src="assets/certificates/cert_12.svg" alt="LinkedIn Certificate 12" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">📜 VERIFIED CERTIFICATE</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Software Quality & System Testing</h3>
+                        <p class="project-description">Live website functional testing, bug reporting, and UI/UX optimization suggestions.</p>
+                        <a href="assets/certificates/cert_12.svg" target="_blank" class="btn btn-sm btn-outline"><i data-feather="maximize-2"></i> View Full Image</a>
+                    </div>
+                </div>
+
+                <!-- Cert 13 -->
+                <div class="card wanted-poster text-center">
+                    <div class="project-image-wrapper">
+                        <img src="assets/certificates/cert_13.svg" alt="LinkedIn Certificate 13" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">📜 VERIFIED CERTIFICATE</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">LLM Prompt Shield & Security Auditing</h3>
+                        <p class="project-description">Protecting Large Language Models from prompt injection attacks and context hijacking.</p>
+                        <a href="assets/certificates/cert_13.svg" target="_blank" class="btn btn-sm btn-outline"><i data-feather="maximize-2"></i> View Full Image</a>
+                    </div>
+                </div>
+
+                <!-- Cert 14 -->
+                <div class="card wanted-poster text-center">
+                    <div class="project-image-wrapper">
+                        <img src="assets/certificates/cert_14.svg" alt="LinkedIn Certificate 14" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">📜 VERIFIED CERTIFICATE</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Facial Embedding & Biometric Systems</h3>
+                        <p class="project-description">Facial feature extraction, identity verification, and automated web attendance dashboards.</p>
+                        <a href="assets/certificates/cert_14.svg" target="_blank" class="btn btn-sm btn-outline"><i data-feather="maximize-2"></i> View Full Image</a>
+                    </div>
+                </div>
+
+                <!-- Cert 15 -->
+                <div class="card wanted-poster text-center">
+                    <div class="project-image-wrapper">
+                        <img src="assets/certificates/cert_15.svg" alt="LinkedIn Certificate 15" class="project-image" loading="lazy">
+                        <div class="bounty-crew-tag">📜 VERIFIED CERTIFICATE</div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">End-to-End Machine Learning Deployment</h3>
+                        <p class="project-description">End-to-end Machine Learning model deployment, API integration, and user interface connection.</p>
+                        <a href="assets/certificates/cert_15.svg" target="_blank" class="btn btn-sm btn-outline"><i data-feather="maximize-2"></i> View Full Image</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT & FEEDBACK COLLAB SECTION -->
+        <section class="section island-section" id="contact-collab-section">
+            <div class="section-header text-center">
+                <span class="section-tag">🔥 MARINEFORD ARENA</span>
+                <h2 class="section-title">Contact Captain S. Sankarsha & Submit Proposals</h2>
+            </div>
+
+            <div class="collab-grid">
+                <!-- Project Feedback Card -->
+                <div class="card">
+                    <h3>💬 Submit Project Feedback</h3>
+                    <p style="color: var(--text-muted); font-size: 0.875rem; margin-bottom: 1.25rem;">Rate S. Sankarsha's projects or suggest technical recommendations!</p>
+                    
+                    <form id="projectFeedbackForm">
+                        <div class="form-group">
+                            <label class="form-label">Target Project</label>
+                            <select class="form-select" id="feedbackProject">
+                                <option value="LLM Firewall & Prompt Shield">LLM Firewall & Prompt Shield (FastAPI)</option>
+                                <option value="Autonomous AI News Agent">Autonomous AI News Agent (Gemini AI)</option>
+                                <option value="Medicine Recommendation System">Medicine Recommendation System (ML Core)</option>
+                                <option value="Face Recognition Attendance System">Face Recognition Attendance System (OpenCV)</option>
+                                <option value="Grand Line Portfolio UI/UX">Grand Line Portfolio UI/UX</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Your Rating</label>
+                            <select class="form-select" id="feedbackRating">
+                                <option value="⭐⭐⭐⭐⭐ 5 Stars - SUPAAAH Excellent!">⭐⭐⭐⭐⭐ 5 Stars - SUPAAAH Excellent!</option>
+                                <option value="⭐⭐⭐⭐ 4 Stars - Great Architecture">⭐⭐⭐⭐ 4 Stars - Great Architecture</option>
+                                <option value="⭐⭐⭐ 3 Stars - Good Core">⭐⭐⭐ 3 Stars - Good Core</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Feedback / Suggestions</label>
+                            <textarea class="form-textarea" id="feedbackMessage" rows="4" placeholder="Write your technical thoughts or recommendations..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i data-feather="send"></i> Send Feedback via Email
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Pitch Open Source Collab Card -->
+                <div class="card">
+                    <h3>🤝 Pitch a Collaborative Project</h3>
+                    <p style="color: var(--text-muted); font-size: 0.875rem; margin-bottom: 1.25rem;">Join Captain S. Sankarsha's AI Pirates Crew! Pitch joint open-source repositories or research!</p>
+
+                    <form id="collabPitchForm">
+                        <div class="form-group">
+                            <label class="form-label">Your Name / Handle</label>
+                            <input type="text" class="form-input" id="collabName" placeholder="e.g. Alex (AI Engineer)" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Contact Email / Discord</label>
+                            <input type="text" class="form-input" id="collabContact" placeholder="e.g. alex@github.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Project Idea / Proposal</label>
+                            <textarea class="form-textarea" id="collabProposal" rows="4" placeholder="Describe the joint AI, FastAPI, or LLM security project you want to build..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i data-feather="anchor"></i> Submit Collab Proposal via Email
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <p>&copy; 2026 S. Sankarsha. "Set sail towards your dreams!" 🏴‍☠️</p>
+            </div>
+            <div class="footer-right">
+                <a href="#dawn-island" class="back-to-top">
+                    Return to Dawn Island <i data-feather="arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Mini Luffy Companion Bot -->
+    <div class="mini-luffy-widget" id="miniLuffyBot" title="Click me to open Sunny AI Assistant!">
+        <div class="luffy-speech-bubble" id="luffySpeechBubble">
+            <span class="luffy-speaker">🍖 Mini Luffy AI Bot:</span>
+            <p id="luffySpeechText">Shishishi! I'm your AI Navigator! Hover over any island to hear me explain!</p>
+        </div>
+        <div class="luffy-avatar-frame">
+            <img src="assets/characters/chibi_luffy.jpg" alt="Chibi Mini Luffy Mascot" class="luffy-avatar-img">
+        </div>
+    </div>
+
+    <!-- PROPOSAL SUBMISSION SUCCESS MODAL -->
+    <div class="modal" id="proposalSuccessModal" aria-hidden="true">
+        <div class="modal-overlay" id="proposalSuccessOverlay"></div>
+        <div class="modal-content card text-center">
+            <button class="modal-close" id="proposalSuccessClose"><i data-feather="x"></i></button>
+            <div class="modal-header">
+                <span class="section-tag">🎉 PROPOSAL SENT & RECORDED!</span>
+                <h3>Den Den Mushi Message Dispatched</h3>
+            </div>
+            <div class="modal-body">
+                <div style="font-size: 3rem; margin-bottom: 0.5rem;">⚓</div>
+                <p style="font-size: 1rem; color: var(--text-main); margin-bottom: 1rem;" id="proposalSuccessMessage">Your submission has been saved to local log book and prefilled into your email client!</p>
+                <div style="background: rgba(7, 25, 47, 0.6); padding: 0.75rem 1rem; border-radius: var(--radius-sm); font-size: 0.875rem; color: var(--parchment-gold);">
+                    Direct Line: <strong>sankarshsreekulam@gmail.com</strong>
+                </div>
+            </div>
+            <div class="modal-footer" style="justify-content: center;">
+                <button class="btn btn-primary" id="proposalSuccessDoneBtn">OK SUPAAAH!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CRUNCHYROLL EPISODE DETAILS MODAL -->
+    <div class="modal" id="episodeModal" aria-hidden="true">
+        <div class="modal-overlay" id="episodeOverlay"></div>
+        <div class="modal-content card episode-modal-content">
+            <button class="modal-close" id="episodeClose"><i data-feather="x"></i></button>
+            <div class="modal-header">
+                <span class="section-tag" id="epNumber">EPISODE SPECS // SEASON 1</span>
+                <h3 id="epTitle">LLM Firewall & Prompt Shield</h3>
+            </div>
+            <div class="modal-body">
+                <p id="epDesc">Detailed technical breakdown of architectural decisions, threat scoring algorithms, and FastAPI micro-service deployment.</p>
+                <div class="terminal-box">
+                    <span class="terminal-title">💻 TECH ARCHITECTURE & RUN COMMANDS</span>
+                    <pre id="epCodeSnippet">import fastapi</pre>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="https://github.com/Sankarsh369" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="epRepoBtn">
+                    <i data-feather="github"></i> View Repository
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SUNNY AI KNOWLEDGE ASSISTANT MODAL -->
+    <div class="modal" id="sunnyAiModal" aria-hidden="true">
+        <div class="modal-overlay" id="sunnyOverlay"></div>
+        <div class="modal-content card sunny-modal-content">
+            <button class="modal-close" id="sunnyClose"><i data-feather="x"></i></button>
+            <div class="modal-header">
+                <span class="section-tag">☀️ THOUSAND SUNNY AI ASSISTANT</span>
+                <h3>Ask Anything About S. Sankarsha</h3>
+            </div>
+
+            <div class="chip-container">
+                <button class="ai-chip" data-query="Tell me about the developer.">Tell me about Sankarsha</button>
+                <button class="ai-chip" data-query="Show me the best projects.">Top Projects</button>
+                <button class="ai-chip" data-query="What technologies does he know?">Tech Stack</button>
+                <button class="ai-chip" data-query="Why should I hire him?">Why Hire Him?</button>
+                <button class="ai-chip" data-query="Tell me about his internship experience.">Internship Experience</button>
+            </div>
+
+            <div class="chat-output" id="sunnyChatOutput">
+                <div class="chat-msg-wrapper">
+                    <img src="assets/characters/chibi_luffy.jpg" alt="Sunny AI Avatar" class="chat-avatar">
+                    <div class="ai-bubble">
+                        <strong>☀️ Sunny AI:</strong> Shishishi! Welcome aboard! I know everything about S. Sankarsha's skills, projects, VIT Bhopal degree, and internship! What would you like to know?
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-box">
+                <input type="text" id="sunnyInput" placeholder="Ask Sunny AI anything about S. Sankarsha..." class="sunny-input-field">
+                <button class="btn btn-primary" id="sunnySendBtn">
+                    <i data-feather="send"></i> Ask
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MY CREW WATCHLIST DRAWER MODAL -->
+    <div class="modal" id="watchlistModal" aria-hidden="true">
+        <div class="modal-overlay" id="watchlistOverlay"></div>
+        <div class="modal-content card">
+            <button class="modal-close" id="watchlistClose"><i data-feather="x"></i></button>
+            <div class="modal-header">
+                <span class="section-tag">🔖 MY CREW WATCHLIST</span>
+                <h3>Saved Projects & Saved Items</h3>
+            </div>
+            <div class="modal-body">
+                <div id="watchlistContentList" class="watchlist-items-list">
+                    <p class="text-muted">No bookmarked items yet! Click '🔖 Save' on any project card to bookmark it here!</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline btn-sm" id="clearWatchlistBtn">
+                    <i data-feather="trash-2"></i> Clear Watchlist
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TREASURE CHEST / RESUME MODAL -->
+    <div class="modal" id="treasureModal" aria-hidden="true">
+        <div class="modal-overlay" id="treasureOverlay"></div>
+        <div class="modal-content card text-center">
+            <button class="modal-close" id="treasureClose"><i data-feather="x"></i></button>
+            <div class="modal-header">
+                <span class="section-tag">🏴‍☠️ ONE PIECE TREASURE CHEST</span>
+                <h3>S. Sankarsha's Resume & Log Book</h3>
+            </div>
+            <div class="modal-body">
+                <div class="treasure-badge-row">
+                    <a href="skills.html" class="treasure-stat-badge">💎 Skills (C++ & Python)</a>
+                    <a href="experience.html" class="treasure-stat-badge">📜 Experience (YugaYatra Intern)</a>
+                    <a href="academics.html" class="treasure-stat-badge">🏛 Education (VIT Bhopal AI/ML)</a>
+                </div>
+
+                <p>You unlocked the official resume log book of S. Sankarsha (B.Tech AI & ML @ VIT Bhopal)!</p>
+
+                <div class="modal-grid">
+                    <div>
+                        <span class="stat-label">Full Name</span>
+                        <div class="stat-value">S. Sankarsha</div>
+                    </div>
+                    <div>
+                        <span class="stat-label">University / Base</span>
+                        <div class="stat-value">VIT Bhopal University</div>
+                    </div>
+                    <div>
+                        <span class="stat-label">Degree Program</span>
+                        <div class="stat-value">B.Tech in AI & ML (2023–2027)</div>
+                    </div>
+                    <div>
+                        <span class="stat-label">Academic Score</span>
+                        <div class="stat-value">CGPA: 7.92 / 10</div>
+                    </div>
+                    <div>
+                        <span class="stat-label">Direct Email</span>
+                        <div class="stat-value">sankarshsreekulam@gmail.com</div>
+                    </div>
+                    <div>
+                        <span class="stat-label">Phone Line</span>
+                        <div class="stat-value">+91 9014936902</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="display: flex; gap: 0.75rem; justify-content: center;">
+                <button class="btn btn-outline" id="modalCopyEmailBtn">
+                    <i data-feather="copy"></i> Copy Email
+                </button>
+                <button class="btn btn-primary" id="downloadResumeActionBtn">
+                    <i data-feather="download"></i> Download Resume PDF
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i data-feather="check-circle"></i>
+        <span id="toastMessage">Action completed!</span>
+    </div>
+
+    <!-- JavaScript Controllers -->
+    <script src="sunnyAI.js"></script>
+    <script src="luffyBot.js"></script>
+    <script src="app.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

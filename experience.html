@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Experience | S. Sankarsha</title>
+    <meta name="description" content="Software Engineer Intern experience at YugaYatra Retail and Teamwork principles of S. Sankarsha.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="oceanCanvas"></canvas>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <span class="straw-hat">👒</span>
+                <span class="brand-name">S.Sankarsha <span class="brand-tag">// GRAND_LINE</span></span>
+            </a>
+            <div class="nav-divider"></div>
+            <button class="nav-toggle" id="navToggle"><i data-feather="menu"></i></button>
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">🏝️ Home</a>
+                <a href="skills.html" class="nav-link">🗡️ Skills</a>
+                <a href="projects.html" class="nav-link">⚙️ Projects</a>
+                <a href="academics.html" class="nav-link">📜 Academics</a>
+                <a href="experience.html" class="nav-link active">🌊 Experience</a>
+                <a href="collab.html" class="nav-link">🤝 Collab & Feedback</a>
+                <button class="btn btn-outline btn-sm" id="openWatchlistBtn"><i data-feather="bookmark"></i> Watchlist (<span id="watchlistCount">0</span>)</button>
+                <button class="btn btn-outline btn-sm sfx-toggle" id="sfxToggleBtn"><i data-feather="volume-2"></i> SFX: ON</button>
+                <button class="btn btn-outline btn-sm" id="openTreasureBtn"><i data-feather="package"></i> Treasure Chest</button>
+                <button class="btn btn-primary btn-sm btn-sunny-ai" id="openSunnyAiBtn"><i data-feather="cpu"></i> Sunny AI</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 4rem;">
+        <section class="section island-section" id="fishman-island" data-luffy-talk="Jinbe says: 'S. Sankarsha demonstrated great honor and work ethic at YugaYatra Retail!'">
+            <div class="section-header">
+                <span class="section-tag">🌊 ISLAND 9: FISHMAN ISLAND PALACE</span>
+                <h2 class="section-title">Professional Experience & Work Ethic</h2>
+            </div>
+
+            <div class="character-guide-box shanks-guide margin-auto" style="max-width: 800px; margin-bottom: 2.5rem;">
+                <img src="assets/characters/shanks.jpg" alt="Shanks" class="guide-avatar">
+                <div>
+                    <span class="guide-name">🏴‍☠️ Red-Haired Shanks & Jinbe (Mentorship)</span>
+                    <p class="guide-speech">"During his Software Engineer Internship at YugaYatra Retail (Nov 2025 – Jan 2026), S. Sankarsha tested live production frontends, reported functional bugs, and proposed actionable UI/UX improvements!"</p>
+                </div>
+            </div>
+
+            <div class="timeline">
+                <div class="card timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <h3 class="timeline-role">Software Engineer Intern</h3>
+                            <div class="timeline-company">YugaYatra Retail (OPC) Private Ltd</div>
+                        </div>
+                        <div class="timeline-period">
+                            <span class="period-badge">Nov 2025 – Jan 2026</span>
+                        </div>
+                    </div>
+                    <ul class="experience-highlights">
+                        <li>Identified and documented functional bugs on live production websites through systematic hands-on testing.</li>
+                        <li>Proposed UI/UX enhancements including optimized imagery, copy revisions, and minor frontend structural fixes.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section island-section" id="baratie-ship" data-luffy-talk="Sanji says: 'A great chef feeds the crew, and a great developer supports his teammates!'">
+            <div class="section-header text-center">
+                <span class="section-tag">🚢 SEA RESTAURANT: BARATIE</span>
+                <h2 class="section-title">Teamwork, Communication & Leadership</h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="card">
+                    <div class="card-icon"><i data-feather="users"></i></div>
+                    <h3>Collaborative Spirit</h3>
+                    <p>Communicates effectively across hybrid engineering workflows to achieve shared goals smoothly.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i data-feather="smile"></i></div>
+                    <h3>Positive Energy</h3>
+                    <p>Brings optimism, enthusiasm, and a solution-oriented mindset to every technical discussion.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i data-feather="shield"></i></div>
+                    <h3>Professional Honor</h3>
+                    <p>Prioritizes integrity, quality QA testing, and dependable delivery in team projects.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 S. Sankarsha. "Set sail towards your dreams!" 🏴‍☠️</p>
+            <a href="index.html" class="back-to-top">Return to Home <i data-feather="arrow-up"></i></a>
+        </div>
+    </footer>
+
+    <div class="mini-luffy-widget" id="miniLuffyBot"><div class="luffy-speech-bubble"><span class="luffy-speaker">🍖 Mini Luffy AI Bot:</span><p id="luffySpeechText">Jinbe and Shanks explain Sankarsha's Software Engineering Internship!</p></div><div class="luffy-avatar-frame"><img src="assets/characters/chibi_luffy.jpg" class="luffy-avatar-img"></div></div>
+
+    <div class="modal" id="sunnyAiModal" aria-hidden="true"><div class="modal-overlay" id="sunnyOverlay"></div><div class="modal-content card sunny-modal-content"><button class="modal-close" id="sunnyClose"><i data-feather="x"></i></button><div class="modal-header"><span class="section-tag">☀️ THOUSAND SUNNY AI ASSISTANT</span><h3>Ask Anything About Experience</h3></div><div class="chip-container"><button class="ai-chip" data-query="Tell me about his internship experience.">Internship Experience</button></div><div class="chat-output" id="sunnyChatOutput"><div class="chat-msg-wrapper"><img src="assets/characters/chibi_luffy.jpg" class="chat-avatar"><div class="ai-bubble"><strong>☀️ Sunny AI:</strong> Ask me about YugaYatra Retail Software Engineer Internship!</div></div></div><div class="chat-input-box"><input type="text" id="sunnyInput" placeholder="Ask Sunny AI..." class="sunny-input-field"><button class="btn btn-primary" id="sunnySendBtn"><i data-feather="send"></i> Ask</button></div></div></div>
+
+    <div class="modal" id="watchlistModal" aria-hidden="true"><div class="modal-overlay" id="watchlistOverlay"></div><div class="modal-content card"><button class="modal-close" id="watchlistClose"><i data-feather="x"></i></button><div class="modal-header"><span class="section-tag">🔖 MY CREW WATCHLIST</span><h3>Saved Items</h3></div><div class="modal-body"><div id="watchlistContentList" class="watchlist-items-list"></div></div><div class="modal-footer"><button class="btn btn-outline btn-sm" id="clearWatchlistBtn"><i data-feather="trash-2"></i> Clear</button></div></div></div>
+
+    <div class="modal" id="treasureModal" aria-hidden="true"><div class="modal-overlay" id="treasureOverlay"></div><div class="modal-content card text-center"><button class="modal-close" id="treasureClose"><i data-feather="x"></i></button><div class="modal-header"><span class="section-tag">🏴‍☠️ TREASURE CHEST</span><h3>Resume Log Book</h3></div><div class="modal-body"><p>S. Sankarsha (B.Tech AI & ML @ VIT Bhopal)</p></div><div class="modal-footer"><button class="btn btn-outline" id="modalCopyEmailBtn"><i data-feather="copy"></i> Copy Email</button><button class="btn btn-primary" id="downloadResumeActionBtn"><i data-feather="download"></i> Download Resume</button></div></div></div>
+
+    <div class="toast" id="toast"><i data-feather="check-circle"></i><span id="toastMessage">Done!</span></div>
+
+    <script src="sunnyAI.js"></script><script src="luffyBot.js"></script><script src="app.js"></script><script>feather.replace();</script>
+</body>
+</html>

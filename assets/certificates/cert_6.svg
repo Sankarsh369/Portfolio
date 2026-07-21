@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560">
+  <!-- Background Card -->
+  <rect width="800" height="560" rx="16" fill="#0b1329" stroke="#475569" stroke-width="3"/>
+
+  <!-- Outer Ornate Border -->
+  <rect x="20" y="20" width="760" height="520" rx="12" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-dasharray="8 4"/>
+  <rect x="28" y="28" width="744" height="504" rx="8" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+
+  <!-- Top Decorative Header Bar -->
+  <path d="M 40 40 L 760 40 A 10 10 0 0 1 760 100 L 40 100 A 10 10 0 0 1 40 40 Z" fill="#1e293b"/>
+  <text x="400" y="78" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" letter-spacing="2">VERIFIED CERTIFICATE OF ACHIEVEMENT</text>
+
+  <!-- Issuing Badge Seal -->
+  <circle cx="400" cy="165" r="42" fill="#0b1329" stroke="#475569" stroke-width="4"/>
+  <circle cx="400" cy="165" r="34" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4 2"/>
+  
+  <!-- Vector Star Seal Center -->
+  <polygon points="400,145 406,158 420,160 410,170 412,184 400,176 388,184 390,170 380,160 394,158" fill="#fbbf24" stroke="#ffffff" stroke-width="1"/>
+
+  <!-- Awarded To Subtext -->
+  <text x="400" y="235" font-size="14" font-weight="bold" fill="rgba(255,255,255,0.7)" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" letter-spacing="2">THIS IS PROUDLY PRESENTED TO</text>
+  
+  <!-- Recipient Name -->
+  <text x="400" y="280" font-size="36" font-weight="bold" fill="#fbbf24" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" letter-spacing="1">S. SANKARSHA</text>
+
+  <!-- Divider Line -->
+  <line x1="250" y1="300" x2="550" y2="300" stroke="#475569" stroke-width="2" stroke-opacity="0.8"/>
+
+  <!-- Course Title -->
+  <text x="400" y="340" font-size="14" font-weight="bold" fill="rgba(255,255,255,0.7)" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">FOR SUCCESSFULLY COMPLETING THE LICENSED PROGRAM</text>
+  <text x="400" y="380" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Automated ETL Pipeline Engineering</text>
+
+  <!-- Issuer -->
+  <text x="400" y="415" font-size="16" font-weight="bold" fill="#475569" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Issued by: Data Engineering Institute</text>
+
+  <!-- Footer Information -->
+  <g transform="translate(0, 450)">
+    <!-- Issue Date -->
+    <text x="120" y="25" font-size="12" fill="rgba(255,255,255,0.6)" font-family="Arial, Helvetica, sans-serif">DATE OF ISSUANCE</text>
+    <text x="120" y="45" font-size="14" font-weight="bold" fill="#ffffff" font-family="Arial, Helvetica, sans-serif">Jan 2025</text>
+
+    <!-- Golden Verification Stamp -->
+    <circle cx="400" cy="30" r="22" fill="rgba(245, 158, 11, 0.2)" stroke="#f59e0b" stroke-width="2"/>
+    <text x="400" y="35" font-size="11" font-weight="bold" fill="#f59e0b" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">VERIFIED</text>
+
+    <!-- Credential ID -->
+    <text x="680" y="25" font-size="12" fill="rgba(255,255,255,0.6)" text-anchor="end" font-family="Arial, Helvetica, sans-serif">CREDENTIAL ID</text>
+    <text x="680" y="45" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="end" font-family="Arial, Helvetica, sans-serif">ETL-ENG-3329</text>
+  </g>
+</svg>

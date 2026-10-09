@@ -58,6 +58,52 @@ const PROJECTS = [
     run: "cd Backend\npip install -r requirements.txt\npython verify_pipeline.py   # benchmark run\nuvicorn app.main:app --reload"
   },
   {
+    slug: "ai-teacher",
+    title: "AI Teacher",
+    tagline: "Human-like AI educator that plans lessons, teaches through video, asks questions and adapts to the learner.",
+    category: "ai",
+    featured: true,
+    badge: "Hackathon · AI Innovation Hackathon 2026",
+    stack: ["Python", "FastAPI", "React", "TypeScript", "Vite", "RAG (TF-IDF)", "Claude / OpenAI", "edge-tts", "SQLite / Postgres"],
+    repo: GH + "ai-teacher",
+    live: "https://ai-teacher-sankarsha.vercel.app",
+    links: [{ label: "API docs", url: "https://ai-teacher-backend-yb5i.onrender.com/docs" }],
+    overview:
+      "A working AI tutor, not a chatbot. Give it a topic or upload notes (PDF, DOCX, PPTX) and it plans a lesson sized to your time, teaches it section by section with a talking avatar, stops to ask checkpoint questions, re-explains misconceptions a different way, adjusts difficulty live, and ends with a graded quiz and a personal report. It can also render the whole lesson as a narrated, downloadable video.",
+    problem:
+      "Recorded lectures only broadcast and text chatbots only answer. Neither checks whether the learner understood, or re-teaches when they didn't.",
+    features: [
+      "Lessons from an uploaded document (RAG-grounded) or from just a topic",
+      "Explain → question → evaluate → adapt loop with live beginner ⇄ intermediate ⇄ advanced difficulty",
+      "Misconception diagnosis instead of plain right/wrong marking",
+      "Server-rendered .mp4 lessons: narrated avatar with audio-driven lip movement and subject-aware visuals",
+      "20 languages, including Hindi, Hinglish and 8 other Indian languages",
+      "Learner memory of weak/strong concepts, AI learning paths, and school roles (principal, teacher, student)",
+      "Pluggable LLM (Claude or OpenAI) plus a zero-cost mock mode so the whole pipeline runs without API keys"
+    ],
+    architecture: [
+      { name: "Frontend", nodes: ["React + Vite + TS (Vercel)", "Classroom (live lesson)", "Video Studio", "Dashboard"] },
+      { name: "API", nodes: ["FastAPI (Render)", "auth · school · materials · sessions · learner · video"] },
+      { name: "Teaching brain", nodes: ["Lesson planner", "Answer evaluator", "Difficulty state machine"] },
+      { name: "AI & retrieval", nodes: ["LLM client (Claude / OpenAI / mock)", "TF-IDF retrieval (RAG)", "PDF/DOCX/PPTX parsers"] },
+      { name: "Media & data", nodes: ["TTS (edge-tts → gTTS → pyttsx3)", "Avatar + slide renderer", "SQLite / Postgres"] }
+    ],
+    workflow: [
+      { t: "Set up", d: "Learner picks a topic or uploads material, and chooses level, language and time budget." },
+      { t: "Plan", d: "Material is chunked and retrieved; the LLM drafts a sectioned lesson plan." },
+      { t: "Teach", d: "The avatar explains each section, grounded in the retrieved context." },
+      { t: "Check", d: "Checkpoint questions are asked and answers are evaluated for misconceptions." },
+      { t: "Adapt", d: "Difficulty shifts and weak concepts are re-taught from a different angle." },
+      { t: "Assess", d: "A final quiz is graded and a personal report updates the learner profile." }
+    ],
+    learned: [
+      "Designing an LLM app around one interface so providers can be swapped or mocked",
+      "Building RAG from scratch and generating video and audio on the server",
+      "Scoping a large feature set against a hackathon brief"
+    ],
+    run: "cd backend && pip install -r requirements.txt && uvicorn app.main:app --reload\ncd frontend && npm install && npm run dev"
+  },
+  {
     slug: "llm-firewall",
     title: "LLM Firewall & Prompt Injection Shield",
     tagline: "API gateway that scores prompts for injection attacks before they reach an LLM.",
@@ -101,13 +147,60 @@ const PROJECTS = [
     run: "pip install -r requirements.txt\nuvicorn app.main:app --reload\n# open http://127.0.0.1:8000/docs"
   },
   {
+    slug: "diffdocs",
+    title: "DiffDocs",
+    tagline: "Turns git diffs into clear AI change reports — features, fixes, breaking changes and risk — with a team dashboard.",
+    category: "ai",
+    featured: true,
+    stack: ["FastAPI", "Google Gemini", "Pydantic", "MongoDB Atlas", "GitHub App + OAuth", "Next.js", "Recharts", "Vercel", "Render"],
+    repo: GH + "diffdocs",
+    live: "https://diffdocs-frontend.vercel.app",
+    liveLabel: "Live dashboard",
+    links: [
+      { label: "Waitlist site", url: "https://sankarsh369.github.io/diffdocs-waitlist/" },
+      { label: "Live API", url: "https://diffdocs-backend.onrender.com" }
+    ],
+    overview:
+      "Developers dislike writing PR descriptions, and managers can't read raw diffs. DiffDocs is installed as a GitHub App: on every push or pull request it fetches the real diff, has Gemini produce a structured analysis, caches it in MongoDB, and shows risk trends, per-commit breakdowns and reviewer load on a dashboard behind GitHub sign-in.",
+    problem:
+      "Changelogs and PR descriptions are often empty or out of date, so stakeholders don't know what actually shipped.",
+    features: [
+      "Real GitHub App: webhook → installation token → fetch the unified diff from the GitHub API",
+      "Gemini analysis with a strict Pydantic schema, so the output is always valid structured JSON",
+      "Per-commit cache in MongoDB, with real authors and reviewers pulled from GitHub",
+      "Next.js dashboard with risk trends and per-contributor review load",
+      "GitHub OAuth sign-in for the dashboard, plus a marketing / waitlist page"
+    ],
+    architecture: [
+      { name: "GitHub", nodes: ["Push / PR event", "GitHub App webhook", "GitHub REST API"] },
+      { name: "Backend", nodes: ["FastAPI (Render)", "Webhook handling", "/api/telemetry · /api/team"] },
+      { name: "AI", nodes: ["Gemini structured analysis (Pydantic schema)"] },
+      { name: "Storage", nodes: ["MongoDB Atlas (analysis cache)"] },
+      { name: "Frontend", nodes: ["Next.js dashboard (Vercel)", "GitHub OAuth login", "Waitlist page (GitHub Pages)"] }
+    ],
+    workflow: [
+      { t: "Event", d: "A push or pull request triggers the GitHub App webhook." },
+      { t: "Fetch diff", d: "The backend authenticates as the App and fetches the real diff from GitHub." },
+      { t: "Cache check", d: "If this commit was analysed before, the cached result is reused." },
+      { t: "Analyse", d: "Gemini returns features, bug fixes, refactors, breaking changes and a risk rating." },
+      { t: "Store & show", d: "The result is saved with author and reviewer data and visualised on the dashboard." }
+    ],
+    learned: [
+      "GitHub Apps, installation tokens and OAuth",
+      "Getting reliable structured output from an LLM",
+      "Splitting a product into a backend, a dashboard and a landing page"
+    ]
+  },
+  {
     slug: "ai-news-agent",
     title: "AI News Agent",
     tagline: "Daily automated pipeline that summarises AI news with Gemini and posts it to Telegram & Discord.",
     category: "automation",
-    featured: true,
     stack: ["Python", "Google Gemini API", "NewsAPI", "Telegram Bot API", "Discord Webhooks", "GitHub Actions"],
     repo: GH + "ai-news-agent",
+    live: "https://github.com/Sankarsh369/ai-news-agent/actions",
+    liveLabel: "See daily runs",
+    liveBadge: "Runs daily",
     overview:
       "A fully hands-off content agent. Every morning a scheduled GitHub Actions job fetches the latest AI headlines, has Gemini rewrite each one as a short, punchy post, cleans the output with a guardrail filter, and delivers it to a Telegram channel and a Discord server.",
     problem:
@@ -185,6 +278,7 @@ const PROJECTS = [
     category: "ml",
     stack: ["Python", "scikit-learn (SVC)", "Pandas", "Flask", "Bootstrap", "Web Speech API"],
     repo: GH + "Health_Care_center",
+    links: [{ label: "View notebook", url: "https://nbviewer.org/github/Sankarsh369/Health_Care_center/blob/main/Medicine%20Recommendation%20System.ipynb" }],
     overview:
       "A Flask web app backed by a Support Vector Classifier trained on 4,920 records covering 132 symptoms and 41 diseases. Users type or speak their symptoms and get the predicted condition with a description and recommended precautions, medications, diets and workouts.",
     problem:
@@ -254,45 +348,45 @@ const PROJECTS = [
     run: "pip install -r requirements.txt\npython document_scanner.py --image photo.jpg --debug"
   },
   {
-    slug: "diffdocs",
-    title: "DiffDocs",
-    tagline: "GitHub integration that turns pull-request diffs into readable AI summaries, plus a product waitlist site.",
+    slug: "voice-shopping",
+    title: "Basket — Voice Shopping Assistant",
+    tagline: "Speak in 7 languages to build a shopping list with prices, a GST receipt and smart suggestions.",
     category: "ai",
-    stack: ["GitHub Actions", "Python", "FastAPI", "Google Gemini", "MongoDB Atlas", "HTML/CSS", "GitHub Pages"],
-    repo: GH + "diffdocs-test-sandbox",
-    repo2: { label: "Waitlist source", url: GH + "diffdocs-waitlist" },
-    live: "https://sankarsh369.github.io/diffdocs-waitlist/",
-    liveLabel: "Waitlist site",
+    stack: ["React", "Vite", "Tailwind CSS", "Web Speech API", "FastAPI", "SQLite", "Docker"],
+    repo: GH + "voice-shopping-assistant",
+    live: "https://voice-shopping-assistant-orcin.vercel.app",
     overview:
-      "Developers dislike writing PR descriptions and stakeholders struggle to follow what changed. DiffDocs runs on every pull request, sends the git diff to a backend that uses Gemini to summarise features, bug fixes, breaking changes and risk, and posts that summary back as a PR comment. A landing page collects early-access sign-ups.",
+      "A voice-first shopping list. Say things like “add two bottles of milk and bread” in English, Hindi, Spanish, French, German, Portuguese or Bengali. A custom NLP engine works out the intent, items and quantities, matches them to a priced catalog and replies by voice in the same language. It shows a receipt with GST, live stock, and suggestions based on your own history.",
     problem:
-      "Raw diffs are unreadable for non-engineers and PR descriptions are often empty. Teams need change summaries written automatically.",
+      "Typing lists on a phone is slow, and most voice assistants only work well in English.",
     features: [
-      "GitHub Actions workflow triggered on PR open/update",
-      "HMAC-SHA256-signed payload containing the diff, repo and commit (backend verification on the roadmap)",
-      "AI analysis: per-file feature summaries, bug fixes, breaking changes, risk level",
-      "Summary posted back to the PR as a formatted comment",
-      "Static waitlist landing page deployed with GitHub Pages"
+      "Intent parsing for add, remove, search, bill, suggest and clear — in 7 languages",
+      "Multi-item commands (“milk and bread”) and de-duplication by catalog product",
+      "Unicode-safe text handling so Devanagari, Bengali and other scripts aren't mangled",
+      "Receipt with item prices, subtotal, GST and total in ₹",
+      "Complementary, seasonal and history-based suggestions",
+      "Sign up, log in or continue as guest, with per-user lists"
     ],
     architecture: [
-      { name: "GitHub", nodes: ["Pull request event", "Actions workflow (diff extraction)"] },
-      { name: "Backend", nodes: ["FastAPI ingestion endpoint (async)", "Exposed via ngrok during testing"] },
-      { name: "AI", nodes: ["Google Gemini analysis"] },
-      { name: "Storage", nodes: ["MongoDB Atlas"] },
-      { name: "Marketing", nodes: ["Waitlist page (GitHub Pages)"] }
+      { name: "Browser", nodes: ["React + Vite SPA (Vercel)", "Speech recognition (STT)", "Speech synthesis (TTS)"] },
+      { name: "API", nodes: ["FastAPI /command endpoint", "Auth", "Catalog & list CRUD"] },
+      { name: "Language", nodes: ["NLP engine (intent, item, qty, unit)", "Localised replies (7 languages)"] },
+      { name: "Logic", nodes: ["Suggestion engine", "Receipt / GST calculator"] },
+      { name: "Data", nodes: ["SQLite (Postgres-ready)", "Seeded product catalog"] }
     ],
     workflow: [
-      { t: "PR opened", d: "A pull request is opened or updated in the connected repo." },
-      { t: "Extract diff", d: "The workflow fetches history and computes the diff against the base branch." },
-      { t: "Send signed", d: "Diff and metadata are signed with HMAC-SHA256 and sent to the backend." },
-      { t: "Analyse", d: "Gemini classifies changes and estimates risk; results are stored." },
-      { t: "Comment", d: "The workflow posts a formatted summary table back on the PR." }
+      { t: "Speak", d: "User taps the mic and speaks a command in their language." },
+      { t: "Transcribe", d: "The browser turns speech into text and sends it with the selected language." },
+      { t: "Understand", d: "NLP engine detects the intent and extracts each item, quantity and unit." },
+      { t: "Act", d: "Items are matched to the catalog, de-duplicated and saved — or a bill / suggestions are returned." },
+      { t: "Reply", d: "The list updates and the assistant answers out loud in the same language." }
     ],
     learned: [
-      "Working with GitHub webhooks, tokens and permissions",
-      "Signing payloads between CI and a backend",
-      "Prompting an LLM for structured JSON output"
-    ]
+      "Writing a rule-based multilingual NLP parser and debugging Unicode issues",
+      "Fixing real user-reported bugs in a second version",
+      "Containerising a full-stack app with Docker Compose"
+    ],
+    run: "docker compose up --build"
   },
   {
     slug: "ai-assistant-site",
@@ -377,6 +471,7 @@ const PROJECTS = [
     stack: ["Python", "Pandas", "Keras", "scikit-learn", "Matplotlib", "Flask"],
     repo: GH + "Wine_Testing",
     live: "https://wine-type-classifier.onrender.com",
+    links: [{ label: "View notebook", url: "https://nbviewer.org/github/Sankarsh369/Wine_Testing/blob/main/wine_testing.ipynb" }],
     overview:
       "Uses the UCI Wine Quality dataset (~6,500 wines). The notebook explores the data and trains a Keras neural network; the deployed app trains a RandomForest at startup and serves a form that returns a red/white prediction with confidence.",
     problem:
@@ -444,6 +539,7 @@ const PROJECTS = [
     category: "data",
     stack: ["Python", "Pandas", "Jupyter"],
     repo: GH + "Messy-Employee-Dataset",
+    links: [{ label: "View notebook", url: "https://nbviewer.org/github/Sankarsh369/Messy-Employee-Dataset/blob/main/scripts/data_cleaning.ipynb" }],
     overview:
       "A data-wrangling exercise on a deliberately messy employee dataset: fixing types, parsing dates, normalising booleans, filling missing values and splitting combined columns, then exporting a clean CSV.",
     problem: "Real-world data is rarely clean; this project practises the cleaning steps that come before any analysis or ML.",

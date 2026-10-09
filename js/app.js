@@ -22,12 +22,13 @@
   $("#year").textContent = new Date().getFullYear();
 
   /* ---------- Stats ---------- */
-  const liveCount = PROJECTS.filter((p) => p.live).length;
+  const isDeployed = (p) => p.live && !p.live.startsWith("https://github.com/");
+  const liveCount = PROJECTS.filter(isDeployed).length;
   $("#stats").innerHTML = [
     [PROJECTS.length, "projects"],
-    [liveCount, "live links"],
-    ["1", "internship"],
-    ["7.93", "CGPA"]
+    [liveCount, "live apps"],
+    ["156+", "LeetCode solved"],
+    ["3★", "CodeChef"]
   ].map(([v, l]) => `<div><dt>${l}</dt><dd>${v}</dd></div>`).join("");
 
   /* ---------- Filters + cards ---------- */
@@ -54,11 +55,11 @@
     const tech = p.stack.slice(0, 4).map((t) => `<li>${esc(t)}</li>`).join("");
     const more = p.stack.length > 4 ? `<li class="more">+${p.stack.length - 4}</li>` : "";
     return `
-      <article class="card${p.featured ? " featured" : ""}">
+      <article class="card c-${p.category}${p.featured ? " featured" : ""}">
         <button type="button" class="card-hit" data-open="${p.slug}" aria-label="Open details for ${esc(p.title)}"></button>
         <div class="card-top">
           <span class="cat">${esc(CATEGORIES[p.category])}</span>
-          ${p.live ? '<span class="live"><span class="dot"></span>Live</span>' : ""}
+          ${p.live ? `<span class="live"><span class="dot"></span>${esc(p.liveBadge || "Live")}</span>` : ""}
         </div>
         <h3>${esc(p.title)}</h3>
         <p>${esc(p.tagline)}</p>
@@ -66,7 +67,10 @@
         <ul class="tags small">${tech}${more}</ul>
         <div class="card-foot">
           <span class="details">View details →</span>
-          <a class="icon-link" href="${p.repo}" target="_blank" rel="noopener" aria-label="${esc(p.title)} source code">${GH_ICON}</a>
+          <span class="card-links">
+            ${p.live ? `<a class="pill-link" href="${p.live}" target="_blank" rel="noopener">${esc(p.liveBadge ? "Runs" : "Live")} ${ARROW}</a>` : ""}
+            <a class="icon-link" href="${p.repo}" target="_blank" rel="noopener" aria-label="${esc(p.title)} source code">${GH_ICON}</a>
+          </span>
         </div>
       </article>`;
   }
@@ -107,7 +111,7 @@
     const links = [
       p.live && `<a class="btn btn-primary" href="${p.live}" target="_blank" rel="noopener">${esc(p.liveLabel || "Live demo")} ${ARROW}</a>`,
       `<a class="btn" href="${p.repo}" target="_blank" rel="noopener">${GH_ICON} Source code</a>`,
-      p.repo2 && `<a class="btn" href="${p.repo2.url}" target="_blank" rel="noopener">${esc(p.repo2.label)}</a>`
+      ...(p.links || []).map((l) => `<a class="btn" href="${l.url}" target="_blank" rel="noopener">${esc(l.label)} ${ARROW}</a>`)
     ].filter(Boolean).join("");
 
     const metrics = p.metrics
@@ -130,7 +134,7 @@
         </button>
       </header>
       <div class="modal-links">${links}</div>
-      ${p.live && /onrender\.com/.test(p.live) ? '<p class="note">Hosted on a free tier — the first load may take 30–60 seconds to wake up.</p>' : ""}
+      ${[p.live, ...(p.links || []).map((l) => l.url)].some((u) => /onrender\.com/.test(u || "")) ? '<p class="note">Hosted on a free tier — the first load may take 30–60 seconds to wake up.</p>' : ""}
       ${metrics}
 
       <section><h3>Overview</h3><p>${esc(p.overview)}</p></section>
@@ -159,6 +163,7 @@
         modal.showModal();
         document.body.classList.add("locked");
       }
+      content.className = "modal-inner c-" + p.category;
       content.innerHTML = detail(p);
       modal.scrollTop = 0;
       content.scrollTop = 0;

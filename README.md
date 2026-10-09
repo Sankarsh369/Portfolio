@@ -1,24 +1,36 @@
-# S. Sankarsha - One Piece Grand Line Portfolio 🏴‍☠️✨
+# S Sankarsha — Portfolio
 
-Welcome to **S. Sankarsha's One Piece Grand Line Developer Portfolio**!
-This repository hosts the multi-page interactive portfolio of S. Sankarsha (B.Tech AI & ML Student at VIT Bhopal University).
+Personal portfolio of **S Sankarsha**, B.Tech AI & ML student at VIT Bhopal University (graduating 2027), open to internships and entry-level roles.
 
-## 🚀 Live Features
-- **Gear 5 Sun God Nika Full-Page Sky Theme**: Sun-drenched sky gradient, animated ocean wave physics, and moving cloud layer.
-- **Joyboy White & Red Conqueror's Haki Sparks**: Haki red lightning sparks and white high-contrast typography.
-- **All 16 GitHub Repositories**: Displaying all open-source projects with direct GitHub links and one-click ZIP download buttons.
-- **Thousand Sunny AI Assistant**: Interactive AI companion answering questions about skills, projects, and credentials.
-- **Web Audio Sound Effects**: Custom synthesized sound effects for sword slashes, liberation drums, and snail calls.
+**Live site:** https://sankarsh369.github.io/Portfolio/
 
-## 📦 How to Deploy on GitHub Pages
-1. Go to your repository settings on GitHub (`https://github.com/Sankarsh369/anime-portfolio-sankarsha`).
-2. Navigate to **Pages** section in the left sidebar.
-3. Under **Build and deployment**, set **Source** to `Deploy from a branch`.
-4. Select `main` branch and `/ (root)` folder, then click **Save**.
-5. Your portfolio will automatically go live at: `https://sankarsh369.github.io/anime-portfolio-sankarsha/`!
+## What's inside
 
-## 💻 Running Locally
+- **Projects** — every project is a card; opening it shows the overview, problem, key features, an architecture diagram, a step-by-step workflow, tech stack, what I learned, run commands, and links to the source code and live demo. Each project has its own shareable URL (e.g. `#project/nucleus`).
+- **Experience, Skills, Education, Certifications, Contact**
+- Light and dark mode, responsive down to phone width, no build step.
+
+## Structure
+
+```
+index.html        page layout and static sections
+styles.css        all styles (design tokens at the top)
+js/projects.js    project data — edit this to add or update a project
+js/app.js         renders cards, filters, and the project detail view
+```
+
+### Adding a project
+
+Add an object to `PROJECTS` in `js/projects.js` with `slug`, `title`, `tagline`, `category`, `stack`, `repo`, optional `live`, `overview`, `problem`, `features`, `architecture` (layers, top to bottom), and `workflow` (ordered steps). The card and detail view are generated automatically.
+
+## Run locally
+
 ```bash
 python -m http.server 8000
 ```
-Then open `http://localhost:8000` in your web browser.
+
+Then open http://localhost:8000.
+
+## Deploy
+
+Hosted on GitHub Pages from the `main` branch root.
